@@ -197,7 +197,7 @@ endif()
 
 add_executable(example test/example.c)
 target_link_libraries(example zlib)
-add_test(example example)
+add_test(NAME zlib-example COMMAND $<TARGET_FILE:example>)
 
 add_executable(minigzip test/minigzip.c)
 target_link_libraries(minigzip zlib)
